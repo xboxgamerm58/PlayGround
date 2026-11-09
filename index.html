@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10131e">
+  <meta name="description" content="Last Bell: a playable, original academy mystery visual novel.">
+  <title>Last Bell — A Mystery at Meridian</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app" class="app-shell">
+    <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+    <header class="topbar">
+      <a class="wordmark" href="#" aria-label="Last Bell home" id="homeLink"><span class="mark">LB</span><span>LAST<span class="wordmark-light"> BELL</span></span></a>
+      <div class="top-meta"><span class="chapter-tag" id="chapterTag">MERIDIAN INSTITUTE</span><span class="top-divider"></span><span id="phaseTag">A STORY IN ONE CHAPTER</span></div>
+      <div class="top-actions"><button class="icon-button" id="soundButton" aria-label="Toggle sound" title="Toggle sound">♪<span class="sound-label">SOUND</span></button><button class="icon-button menu-button" id="menuButton" aria-label="Open menu" title="Menu">☰</button></div>
+    </header>
+    <section id="titleScreen" class="title-screen">
+      <div class="title-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> AN ORIGINAL ACADEMY MYSTERY</p>
+        <h1>LAST<br><em>BELL</em></h1>
+        <p class="title-subtitle">Every alibi has an<br><strong>expiration date.</strong></p>
+        <p class="title-description">Eight students. One sealed campus.<br>And a final broadcast nobody can explain.</p>
+        <button id="startButton" class="primary-button"><span>BEGIN THE STORY</span><span class="button-arrow">↗</span></button>
+        <div class="title-foot"><span>CHAPTER 01</span><span class="foot-dot"></span><span>~ 15 MIN</span><span class="foot-dot"></span><span>CHOICE-DRIVEN MYSTERY</span></div>
+      </div>
+      <div class="title-art" aria-label="Abstract illustration of an academy bell tower">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="tower-shadow"></div><div class="tower"><div class="tower-roof"></div><div class="tower-window"><span></span></div><div class="tower-clock">09<span>:</span>12</div><div class="tower-base"></div></div>
+        <div class="bell-shape"><span></span></div><div class="art-label label-left">MERIDIAN<br>INSTITUTE</div><div class="art-label label-right">EST.<br>1986</div>
+        <div class="art-stamp">THE<br><b>LAST</b><br>BELL</div><div class="art-index">01 / THE CLOSED CAMPUS</div>
+      </div>
+      <div class="title-bottom"><span>SCROLL OF FATE // VOL. 01</span><span>USE MOUSE OR TOUCH TO PLAY</span></div>
+    </section>
+    <section id="gameScreen" class="game-screen hidden" aria-live="polite">
+      <div class="game-layout">
+        <aside class="left-rail">
+          <div class="rail-label">CASE FILE <span>01</span></div>
+          <div class="rail-rule"></div>
+          <div class="case-title">THE<br><em>FINAL</em><br>FREQUENCY</div>
+          <div class="case-status" id="caseStatus"><i></i> STORY</div>
+          <div class="rail-progress"><span id="progressFill"></span></div>
+          <div class="progress-caption"><span>PROGRESS</span><b id="progressText">00%</b></div>
+          <div class="rail-bottom"><span>MERIDIAN INSTITUTE</span><b>09:12 PM</b></div>
+        </aside>
+        <div class="play-area" id="playArea"></div>
+      </div>
+    </section>
+    <footer class="site-footer"><span>LAST BELL <b>·</b> A SMALL MYSTERY ABOUT LISTENING</span><span>© 2026 MERIDIAN STUDENT ARCHIVE</span></footer>
+    <div id="modalLayer" class="modal-layer hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle"></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
